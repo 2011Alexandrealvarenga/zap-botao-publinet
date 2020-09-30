@@ -1,0 +1,82 @@
+<!--scripts para colocar o pop-up de whatsapp-->
+
+<!--COLOCAR O HTML DEPOIS DO MENU-->
+<!--HTML-->
+<div class="popup">
+    <button class="close">+</button>
+    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511999371128&text=Olá, vi seu site no google e gostaria de saber mais sobre os seus serviços." target="_blank">
+        <div class="text">
+            <p>Call now on whatsapp <br>+55 (11) 99937-1128</p>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+    </a>
+</div>
+<!--//HTML-->
+
+<!--STYLE-->
+<style>
+    .popup{
+    position: fixed;
+    z-index: 9999999;
+    left:-227px;
+    top:30%;
+    transition: left 1.5s;
+}
+.popup:hover{
+    left:0;
+}
+.popup .close{
+    position: absolute;
+    bottom:-30px; 
+    left:50%;
+    margin-left: -10px;
+    padding:2px;
+    width: 22px;
+    height: 22px;
+    opacity: .9;
+    background: #333;
+    color:#fff;
+    font-size: 16px;
+    border:none;
+    border-radius: 100%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.popup .text{
+    background: #48c856;
+    padding: 5px 15px;
+}
+.popup .text *{
+    color:#fff;
+    margin:0;
+}
+.popup .text .fa{
+    position: absolute;
+    background: #48c856;
+    border-radius: 50%;
+    right: -56px;
+    top:50%;
+    margin-top: -35px;
+    width: 70px;
+    height: 70px;
+    border: none!important;
+    font-size: 45px;
+    padding:15px;
+}
+.popup .text .fa:hover{
+    opacity: 1;
+}
+</style>
+<!-- //STYLE-->
+
+<!--SCRIPT-->
+<script>
+    $('.popup .close').click(
+		function(){
+			$('.popup').hide();
+		}
+	);
+</script>
+<!-- //SCRIPT-->
